@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CareerPath — Discover Your Future
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <a class="logo" href="#home">
+    ✦ CareerPath
+   </a>
+   <nav>
+    <a href="#home">
+     Home
+    </a>
+    <a href="#careers">
+     Explore Careers
+    </a>
+    <a href="#quiz">
+     Assessment
+    </a>
+    <a href="#dashboard">
+     Dashboard
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+   </nav>
+   <div class="account">
+    <span id="who">
+    </span>
+    <button class="small" id="authButton">
+     Login / Sign up
+    </button>
+    <button aria-label="Toggle theme" class="small" id="theme">
+     ☾
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="hero" id="home">
+    <div>
+     <span class="eyebrow">
+      YOUR FUTURE STARTS HERE
+     </span>
+     <h1>
+      Discover your passion.
+      <br/>
+      <em>
+       Build your future.
+      </em>
+     </h1>
+     <p>
+      Explore exciting careers, discover your interests and follow a practical learning roadmap.
+     </p>
+     <div class="actions">
+      <a class="btn" href="#quiz">
+       Take career quiz →
+      </a>
+      <a class="btn secondary" href="#careers">
+       Explore careers
+      </a>
+     </div>
+     <div class="stats">
+      <span>
+       <b>
+        12
+       </b>
+       career guides
+      </span>
+      <span>
+       <b>
+        15
+       </b>
+       quiz questions
+      </span>
+      <span>
+       <b>
+        Free
+       </b>
+       to explore
+      </span>
+     </div>
+    </div>
+    <div class="heroart">
+     <div class="floating">
+      ✦ Your next chapter
+     </div>
+     <div class="orb">
+      🚀
+     </div>
+     <div class="floatbottom">
+      Explore · Learn · Grow
+     </div>
+    </div>
+   </section>
+   <section class="section" id="careers">
+    <div class="sectiontop">
+     <div>
+      <span class="eyebrow">
+       FIND YOUR DIRECTION
+      </span>
+      <h2>
+       Explore career paths
+      </h2>
+      <p>
+       Discover opportunities that match your curiosity.
+      </p>
+     </div>
+    </div>
+    <div class="filters">
+     <input aria-label="Search careers" id="search" placeholder="Search careers or skills..."/>
+     <select id="category">
+      <option value="">
+       All categories
+      </option>
+      <option>
+       Technology
+      </option>
+      <option>
+       Creative
+      </option>
+      <option>
+       Business
+      </option>
+      <option>
+       Science
+      </option>
+      <option>
+       People
+      </option>
+     </select>
+    </div>
+    <div class="grid" id="careerGrid">
+    </div>
+   </section>
+   <section class="section tinted" id="quiz">
+    <span class="eyebrow">
+     DISCOVER YOUR STRENGTHS
+    </span>
+    <h2>
+     Career interest assessment
+    </h2>
+    <p>
+     Rate how much you agree with each statement, from 1 (not at all) to 5 (strongly agree).
+    </p>
+    <div class="panel" id="quizBox">
+     <button id="startQuiz">
+      Start 15-question quiz →
+     </button>
+    </div>
+    <div id="quizResults">
+    </div>
+   </section>
+   <section class="section" id="dashboard">
+    <span class="eyebrow">
+     YOUR PERSONAL SPACE
+    </span>
+    <h2>
+     Student dashboard
+    </h2>
+    <div class="panel" id="dashBox">
+     Log in to see your saved careers and assessment history.
+    </div>
+   </section>
+   <section class="section tinted" id="contact">
+    <span class="eyebrow">
+     GET IN TOUCH
+    </span>
+    <h2>
+     Have a question?
+    </h2>
+    <form class="panel form" id="contactForm">
+     <input name="name" placeholder="Your name" required=""/>
+     <input name="email" placeholder="Email address" required="" type="email"/>
+     <textarea maxlength="2000" name="message" placeholder="Your question" required="" rows="4"></textarea>
+     <button>
+      Send message
+     </button>
+     <p id="contactStatus" role="status">
+     </p>
+    </form>
+   </section>
+  </main>
+  <footer>
+   ✦ CareerPath · Student career exploration project · Recommendations are guidance, not professional counselling.
+  </footer>
+  <dialog id="modal">
+   <form class="form" id="authForm">
+    <h2 id="authTitle">
+     Welcome back
+    </h2>
+    <input hidden="" id="signupName" name="name" placeholder="Full name"/>
+    <input name="email" placeholder="Email" required="" type="email"/>
+    <input name="password" placeholder="Password (minimum 8 characters)" required="" type="password"/>
+    <p id="authError" role="alert">
+    </p>
+    <button id="authSubmit">
+     Login
+    </button>
+    <button class="secondary" id="switchAuth" type="button">
+     Create an account
+    </button>
+    <button class="textbutton" id="closeModal" type="button">
+     Close
+    </button>
+   </form>
+  </dialog>
+  <dialog id="careerModal">
+   <div id="careerDetail">
+   </div>
+   <button id="closeCareer">
+    Close
+   </button>
+  </dialog>
+  <script src="app.js">
+  </script>
+ </body>
+</html>
+
